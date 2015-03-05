@@ -62,6 +62,19 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnViewPatients = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.provinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ohipCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet21 = new AsmaraClinic.DataSet2();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label22 = new System.Windows.Forms.Label();
             this.btnRefsresh = new System.Windows.Forms.Button();
@@ -93,29 +106,43 @@
             this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
-            this.dataSet21 = new AsmaraClinic.DataSet2();
-            this.patientBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.patientIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.streetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.provinceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.postalCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ohipCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter2 = new System.Data.SqlClient.SqlDataAdapter();
+            this.asmaraClinicDataSet1 = new AsmaraClinic.AsmaraClinicDataSet();
             this.timeSlotTableAdapter1 = new AsmaraClinic.AsmaraClinicDataSetTableAdapters.TimeSlotTableAdapter();
+            this.dataSet31 = new AsmaraClinic.DataSet3();
+            this.dataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnAllStaff = new System.Windows.Forms.Button();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.staffIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobTitleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.jobIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hireDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -144,6 +171,7 @@
             this.tabControl2.Controls.Add(this.tabPage3);
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage4);
+            this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Location = new System.Drawing.Point(4, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -434,6 +462,82 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(519, 228);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // patientIDDataGridViewTextBoxColumn
+            // 
+            this.patientIDDataGridViewTextBoxColumn.DataPropertyName = "PatientID";
+            this.patientIDDataGridViewTextBoxColumn.HeaderText = "PatientID";
+            this.patientIDDataGridViewTextBoxColumn.Name = "patientIDDataGridViewTextBoxColumn";
+            // 
+            // fNameDataGridViewTextBoxColumn
+            // 
+            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
+            this.fNameDataGridViewTextBoxColumn.HeaderText = "FName";
+            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            // 
+            // lNameDataGridViewTextBoxColumn
+            // 
+            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "LName";
+            this.lNameDataGridViewTextBoxColumn.HeaderText = "LName";
+            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            // 
+            // streetDataGridViewTextBoxColumn
+            // 
+            this.streetDataGridViewTextBoxColumn.DataPropertyName = "Street";
+            this.streetDataGridViewTextBoxColumn.HeaderText = "Street";
+            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
+            // 
+            // cityDataGridViewTextBoxColumn
+            // 
+            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
+            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
+            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            // 
+            // provinceDataGridViewTextBoxColumn
+            // 
+            this.provinceDataGridViewTextBoxColumn.DataPropertyName = "Province";
+            this.provinceDataGridViewTextBoxColumn.HeaderText = "Province";
+            this.provinceDataGridViewTextBoxColumn.Name = "provinceDataGridViewTextBoxColumn";
+            // 
+            // postalCodeDataGridViewTextBoxColumn
+            // 
+            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
+            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "PostalCode";
+            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // ohipCardDataGridViewTextBoxColumn
+            // 
+            this.ohipCardDataGridViewTextBoxColumn.DataPropertyName = "OhipCard";
+            this.ohipCardDataGridViewTextBoxColumn.HeaderText = "OhipCard";
+            this.ohipCardDataGridViewTextBoxColumn.Name = "ohipCardDataGridViewTextBoxColumn";
+            // 
+            // staffIDDataGridViewTextBoxColumn
+            // 
+            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
+            // 
+            // patientBindingSource
+            // 
+            this.patientBindingSource.DataMember = "Patient";
+            this.patientBindingSource.DataSource = this.dataSet21;
+            // 
+            // dataSet21
+            // 
+            this.dataSet21.DataSetName = "DataSet2";
+            this.dataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage4
             // 
@@ -756,85 +860,202 @@
                         new System.Data.Common.DataColumnMapping("StaffID", "StaffID")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
             // 
-            // dataSet21
+            // tabPage6
             // 
-            this.dataSet21.DataSetName = "DataSet2";
-            this.dataSet21.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tabPage6.Controls.Add(this.btnAllStaff);
+            this.tabPage6.Controls.Add(this.dataGridView2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(572, 280);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "View Staff";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
-            // patientBindingSource
+            // dataGridView2
             // 
-            this.patientBindingSource.DataMember = "Patient";
-            this.patientBindingSource.DataSource = this.dataSet21;
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.staffIDDataGridViewTextBoxColumn1,
+            this.fNameDataGridViewTextBoxColumn1,
+            this.lNameDataGridViewTextBoxColumn1,
+            this.jobTitleDataGridViewTextBoxColumn,
+            this.jobIDDataGridViewTextBoxColumn,
+            this.hireDateDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn1,
+            this.emailDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.staffBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(523, 161);
+            this.dataGridView2.TabIndex = 0;
             // 
-            // patientIDDataGridViewTextBoxColumn
+            // sqlSelectCommand2
             // 
-            this.patientIDDataGridViewTextBoxColumn.DataPropertyName = "PatientID";
-            this.patientIDDataGridViewTextBoxColumn.HeaderText = "PatientID";
-            this.patientIDDataGridViewTextBoxColumn.Name = "patientIDDataGridViewTextBoxColumn";
+            this.sqlSelectCommand2.CommandText = "SELECT        Staff.*\r\nFROM            Staff";
+            this.sqlSelectCommand2.Connection = this.sqlConnection1;
             // 
-            // fNameDataGridViewTextBoxColumn
+            // sqlInsertCommand2
             // 
-            this.fNameDataGridViewTextBoxColumn.DataPropertyName = "FName";
-            this.fNameDataGridViewTextBoxColumn.HeaderText = "FName";
-            this.fNameDataGridViewTextBoxColumn.Name = "fNameDataGridViewTextBoxColumn";
+            this.sqlInsertCommand2.CommandText = resources.GetString("sqlInsertCommand2.CommandText");
+            this.sqlInsertCommand2.Connection = this.sqlConnection1;
+            this.sqlInsertCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@StaffID", System.Data.SqlDbType.Int, 0, "StaffID"),
+            new System.Data.SqlClient.SqlParameter("@FName", System.Data.SqlDbType.NVarChar, 0, "FName"),
+            new System.Data.SqlClient.SqlParameter("@LName", System.Data.SqlDbType.NVarChar, 0, "LName"),
+            new System.Data.SqlClient.SqlParameter("@JobTitle", System.Data.SqlDbType.NVarChar, 0, "JobTitle"),
+            new System.Data.SqlClient.SqlParameter("@JobID", System.Data.SqlDbType.NVarChar, 0, "JobID"),
+            new System.Data.SqlClient.SqlParameter("@HireDate", System.Data.SqlDbType.Date, 0, "HireDate"),
+            new System.Data.SqlClient.SqlParameter("@Address", System.Data.SqlDbType.NVarChar, 0, "Address"),
+            new System.Data.SqlClient.SqlParameter("@PhoneNumber", System.Data.SqlDbType.NVarChar, 0, "PhoneNumber"),
+            new System.Data.SqlClient.SqlParameter("@Email", System.Data.SqlDbType.NVarChar, 0, "Email")});
             // 
-            // lNameDataGridViewTextBoxColumn
+            // sqlUpdateCommand2
             // 
-            this.lNameDataGridViewTextBoxColumn.DataPropertyName = "LName";
-            this.lNameDataGridViewTextBoxColumn.HeaderText = "LName";
-            this.lNameDataGridViewTextBoxColumn.Name = "lNameDataGridViewTextBoxColumn";
+            this.sqlUpdateCommand2.CommandText = resources.GetString("sqlUpdateCommand2.CommandText");
+            this.sqlUpdateCommand2.Connection = this.sqlConnection1;
+            this.sqlUpdateCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@StaffID", System.Data.SqlDbType.Int, 0, "StaffID"),
+            new System.Data.SqlClient.SqlParameter("@FName", System.Data.SqlDbType.NVarChar, 0, "FName"),
+            new System.Data.SqlClient.SqlParameter("@LName", System.Data.SqlDbType.NVarChar, 0, "LName"),
+            new System.Data.SqlClient.SqlParameter("@JobTitle", System.Data.SqlDbType.NVarChar, 0, "JobTitle"),
+            new System.Data.SqlClient.SqlParameter("@JobID", System.Data.SqlDbType.NVarChar, 0, "JobID"),
+            new System.Data.SqlClient.SqlParameter("@HireDate", System.Data.SqlDbType.Date, 0, "HireDate"),
+            new System.Data.SqlClient.SqlParameter("@Address", System.Data.SqlDbType.NVarChar, 0, "Address"),
+            new System.Data.SqlClient.SqlParameter("@PhoneNumber", System.Data.SqlDbType.NVarChar, 0, "PhoneNumber"),
+            new System.Data.SqlClient.SqlParameter("@Email", System.Data.SqlDbType.NVarChar, 0, "Email"),
+            new System.Data.SqlClient.SqlParameter("@Original_StaffID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StaffID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_FName", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "FName", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_LName", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "LName", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_JobTitle", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "JobTitle", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_JobID", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "JobID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_HireDate", System.Data.SqlDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "HireDate", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Address", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Address", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "PhoneNumber", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Email", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Email", System.Data.DataRowVersion.Original, null)});
             // 
-            // streetDataGridViewTextBoxColumn
+            // sqlDeleteCommand2
             // 
-            this.streetDataGridViewTextBoxColumn.DataPropertyName = "Street";
-            this.streetDataGridViewTextBoxColumn.HeaderText = "Street";
-            this.streetDataGridViewTextBoxColumn.Name = "streetDataGridViewTextBoxColumn";
+            this.sqlDeleteCommand2.CommandText = resources.GetString("sqlDeleteCommand2.CommandText");
+            this.sqlDeleteCommand2.Connection = this.sqlConnection1;
+            this.sqlDeleteCommand2.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_StaffID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StaffID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_FName", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "FName", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_LName", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "LName", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_JobTitle", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "JobTitle", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_JobID", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "JobID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_HireDate", System.Data.SqlDbType.Date, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "HireDate", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Address", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Address", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_PhoneNumber", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "PhoneNumber", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_Email", System.Data.SqlDbType.NVarChar, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "Email", System.Data.DataRowVersion.Original, null)});
             // 
-            // cityDataGridViewTextBoxColumn
+            // sqlDataAdapter2
             // 
-            this.cityDataGridViewTextBoxColumn.DataPropertyName = "City";
-            this.cityDataGridViewTextBoxColumn.HeaderText = "City";
-            this.cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            this.sqlDataAdapter2.DeleteCommand = this.sqlDeleteCommand2;
+            this.sqlDataAdapter2.InsertCommand = this.sqlInsertCommand2;
+            this.sqlDataAdapter2.SelectCommand = this.sqlSelectCommand2;
+            this.sqlDataAdapter2.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "Staff", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("StaffID", "StaffID"),
+                        new System.Data.Common.DataColumnMapping("FName", "FName"),
+                        new System.Data.Common.DataColumnMapping("LName", "LName"),
+                        new System.Data.Common.DataColumnMapping("JobTitle", "JobTitle"),
+                        new System.Data.Common.DataColumnMapping("JobID", "JobID"),
+                        new System.Data.Common.DataColumnMapping("HireDate", "HireDate"),
+                        new System.Data.Common.DataColumnMapping("Address", "Address"),
+                        new System.Data.Common.DataColumnMapping("PhoneNumber", "PhoneNumber"),
+                        new System.Data.Common.DataColumnMapping("Email", "Email")})});
+            this.sqlDataAdapter2.UpdateCommand = this.sqlUpdateCommand2;
             // 
-            // provinceDataGridViewTextBoxColumn
+            // asmaraClinicDataSet1
             // 
-            this.provinceDataGridViewTextBoxColumn.DataPropertyName = "Province";
-            this.provinceDataGridViewTextBoxColumn.HeaderText = "Province";
-            this.provinceDataGridViewTextBoxColumn.Name = "provinceDataGridViewTextBoxColumn";
-            // 
-            // postalCodeDataGridViewTextBoxColumn
-            // 
-            this.postalCodeDataGridViewTextBoxColumn.DataPropertyName = "PostalCode";
-            this.postalCodeDataGridViewTextBoxColumn.HeaderText = "PostalCode";
-            this.postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // ohipCardDataGridViewTextBoxColumn
-            // 
-            this.ohipCardDataGridViewTextBoxColumn.DataPropertyName = "OhipCard";
-            this.ohipCardDataGridViewTextBoxColumn.HeaderText = "OhipCard";
-            this.ohipCardDataGridViewTextBoxColumn.Name = "ohipCardDataGridViewTextBoxColumn";
-            // 
-            // staffIDDataGridViewTextBoxColumn
-            // 
-            this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "StaffID";
-            this.staffIDDataGridViewTextBoxColumn.HeaderText = "StaffID";
-            this.staffIDDataGridViewTextBoxColumn.Name = "staffIDDataGridViewTextBoxColumn";
+            this.asmaraClinicDataSet1.DataSetName = "AsmaraClinicDataSet";
+            this.asmaraClinicDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // timeSlotTableAdapter1
             // 
             this.timeSlotTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataSet31
+            // 
+            this.dataSet31.DataSetName = "DataSet3";
+            this.dataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSet31BindingSource
+            // 
+            this.dataSet31BindingSource.DataSource = this.dataSet31;
+            this.dataSet31BindingSource.Position = 0;
+            // 
+            // btnAllStaff
+            // 
+            this.btnAllStaff.Location = new System.Drawing.Point(182, 233);
+            this.btnAllStaff.Name = "btnAllStaff";
+            this.btnAllStaff.Size = new System.Drawing.Size(158, 23);
+            this.btnAllStaff.TabIndex = 1;
+            this.btnAllStaff.Text = "View All Staff";
+            this.btnAllStaff.UseVisualStyleBackColor = true;
+            this.btnAllStaff.Click += new System.EventHandler(this.btnAllStaff_Click);
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataMember = "Staff";
+            this.staffBindingSource.DataSource = this.dataSet31BindingSource;
+            // 
+            // staffIDDataGridViewTextBoxColumn1
+            // 
+            this.staffIDDataGridViewTextBoxColumn1.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn1.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn1.Name = "staffIDDataGridViewTextBoxColumn1";
+            // 
+            // fNameDataGridViewTextBoxColumn1
+            // 
+            this.fNameDataGridViewTextBoxColumn1.DataPropertyName = "FName";
+            this.fNameDataGridViewTextBoxColumn1.HeaderText = "FName";
+            this.fNameDataGridViewTextBoxColumn1.Name = "fNameDataGridViewTextBoxColumn1";
+            // 
+            // lNameDataGridViewTextBoxColumn1
+            // 
+            this.lNameDataGridViewTextBoxColumn1.DataPropertyName = "LName";
+            this.lNameDataGridViewTextBoxColumn1.HeaderText = "LName";
+            this.lNameDataGridViewTextBoxColumn1.Name = "lNameDataGridViewTextBoxColumn1";
+            // 
+            // jobTitleDataGridViewTextBoxColumn
+            // 
+            this.jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
+            this.jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
+            this.jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
+            // 
+            // jobIDDataGridViewTextBoxColumn
+            // 
+            this.jobIDDataGridViewTextBoxColumn.DataPropertyName = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.HeaderText = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.Name = "jobIDDataGridViewTextBoxColumn";
+            // 
+            // hireDateDataGridViewTextBoxColumn
+            // 
+            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn1
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
             // 
             // Form1
             // 
@@ -851,10 +1072,16 @@
             this.tabPage3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.patientBindingSource)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,6 +1165,27 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource patientBindingSource;
         private AsmaraClinicDataSetTableAdapters.TimeSlotTableAdapter timeSlotTableAdapter1;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand2;
+        private System.Data.SqlClient.SqlCommand sqlInsertCommand2;
+        private System.Data.SqlClient.SqlCommand sqlUpdateCommand2;
+        private System.Data.SqlClient.SqlCommand sqlDeleteCommand2;
+        private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter2;
+        private AsmaraClinicDataSet asmaraClinicDataSet1;
+        private System.Windows.Forms.Button btnAllStaff;
+        private System.Windows.Forms.BindingSource dataSet31BindingSource;
+        private DataSet3 dataSet31;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobTitleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn jobIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hireDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource staffBindingSource;
     }
 }
 

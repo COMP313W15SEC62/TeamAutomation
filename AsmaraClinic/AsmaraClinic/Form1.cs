@@ -68,5 +68,10 @@ namespace AsmaraClinic
         {
             sqlDataAdapter1.Fill(dataSet21);
         }
+
+        private void btnAllStaff_Click(object sender, EventArgs e)
+        {
+            sqlDataAdapter2.Fill(dataSet31);
+        }
     }
 }
