@@ -97,28 +97,9 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
-            this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDeleteCommand2 = new System.Data.SqlClient.SqlCommand();
-            this.sqlDataAdapter2 = new System.Data.SqlClient.SqlDataAdapter();
-            this.asmaraClinicDataSet1 = new AsmaraClinic.AsmaraClinicDataSet();
-            this.timeSlotTableAdapter1 = new AsmaraClinic.AsmaraClinicDataSetTableAdapters.TimeSlotTableAdapter();
-            this.dataSet31 = new AsmaraClinic.DataSet3();
-            this.dataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnAllStaff = new System.Windows.Forms.Button();
-            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.staffIDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -128,6 +109,37 @@
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet31 = new AsmaraClinic.DataSet3();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
+            this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlSelectCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand1 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter1 = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlSelectCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand2 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter2 = new System.Data.SqlClient.SqlDataAdapter();
+            this.asmaraClinicDataSet1 = new AsmaraClinic.AsmaraClinicDataSet();
+            this.timeSlotTableAdapter1 = new AsmaraClinic.AsmaraClinicDataSetTableAdapters.TimeSlotTableAdapter();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtAppointmentID = new System.Windows.Forms.TextBox();
+            this.txtPatientID = new System.Windows.Forms.TextBox();
+            this.txtStaffID3 = new System.Windows.Forms.TextBox();
+            this.txtDateTime = new System.Windows.Forms.TextBox();
+            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.sqlCommand3 = new System.Data.SqlClient.SqlCommand();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -139,10 +151,11 @@
             this.tabPage4.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -172,6 +185,7 @@
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage6);
+            this.tabControl2.Controls.Add(this.tabPage7);
             this.tabControl2.Location = new System.Drawing.Point(4, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
@@ -744,6 +758,137 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "StaffID:";
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.btnAllStaff);
+            this.tabPage6.Controls.Add(this.dataGridView2);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(572, 280);
+            this.tabPage6.TabIndex = 3;
+            this.tabPage6.Text = "View Staff";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // btnAllStaff
+            // 
+            this.btnAllStaff.Location = new System.Drawing.Point(182, 233);
+            this.btnAllStaff.Name = "btnAllStaff";
+            this.btnAllStaff.Size = new System.Drawing.Size(158, 23);
+            this.btnAllStaff.TabIndex = 1;
+            this.btnAllStaff.Text = "View All Staff";
+            this.btnAllStaff.UseVisualStyleBackColor = true;
+            this.btnAllStaff.Click += new System.EventHandler(this.btnAllStaff_Click);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.staffIDDataGridViewTextBoxColumn1,
+            this.fNameDataGridViewTextBoxColumn1,
+            this.lNameDataGridViewTextBoxColumn1,
+            this.jobTitleDataGridViewTextBoxColumn,
+            this.jobIDDataGridViewTextBoxColumn,
+            this.hireDateDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn1,
+            this.emailDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.staffBindingSource;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(523, 161);
+            this.dataGridView2.TabIndex = 0;
+            // 
+            // staffIDDataGridViewTextBoxColumn1
+            // 
+            this.staffIDDataGridViewTextBoxColumn1.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn1.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn1.Name = "staffIDDataGridViewTextBoxColumn1";
+            // 
+            // fNameDataGridViewTextBoxColumn1
+            // 
+            this.fNameDataGridViewTextBoxColumn1.DataPropertyName = "FName";
+            this.fNameDataGridViewTextBoxColumn1.HeaderText = "FName";
+            this.fNameDataGridViewTextBoxColumn1.Name = "fNameDataGridViewTextBoxColumn1";
+            // 
+            // lNameDataGridViewTextBoxColumn1
+            // 
+            this.lNameDataGridViewTextBoxColumn1.DataPropertyName = "LName";
+            this.lNameDataGridViewTextBoxColumn1.HeaderText = "LName";
+            this.lNameDataGridViewTextBoxColumn1.Name = "lNameDataGridViewTextBoxColumn1";
+            // 
+            // jobTitleDataGridViewTextBoxColumn
+            // 
+            this.jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
+            this.jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
+            this.jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
+            // 
+            // jobIDDataGridViewTextBoxColumn
+            // 
+            this.jobIDDataGridViewTextBoxColumn.DataPropertyName = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.HeaderText = "JobID";
+            this.jobIDDataGridViewTextBoxColumn.Name = "jobIDDataGridViewTextBoxColumn";
+            // 
+            // hireDateDataGridViewTextBoxColumn
+            // 
+            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
+            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // phoneNumberDataGridViewTextBoxColumn1
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
+            // 
+            // emailDataGridViewTextBoxColumn1
+            // 
+            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataMember = "Staff";
+            this.staffBindingSource.DataSource = this.dataSet31BindingSource;
+            // 
+            // dataSet31BindingSource
+            // 
+            this.dataSet31BindingSource.DataSource = this.dataSet31;
+            this.dataSet31BindingSource.Position = 0;
+            // 
+            // dataSet31
+            // 
+            this.dataSet31.DataSetName = "DataSet3";
+            this.dataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.button2);
+            this.tabPage7.Controls.Add(this.btnAddAppointment);
+            this.tabPage7.Controls.Add(this.txtDateTime);
+            this.tabPage7.Controls.Add(this.txtStaffID3);
+            this.tabPage7.Controls.Add(this.txtPatientID);
+            this.tabPage7.Controls.Add(this.txtAppointmentID);
+            this.tabPage7.Controls.Add(this.label26);
+            this.tabPage7.Controls.Add(this.label25);
+            this.tabPage7.Controls.Add(this.label24);
+            this.tabPage7.Controls.Add(this.label23);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(572, 280);
+            this.tabPage7.TabIndex = 4;
+            this.tabPage7.Text = "Appointment";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -860,38 +1005,6 @@
                         new System.Data.Common.DataColumnMapping("StaffID", "StaffID")})});
             this.sqlDataAdapter1.UpdateCommand = this.sqlUpdateCommand1;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.btnAllStaff);
-            this.tabPage6.Controls.Add(this.dataGridView2);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(572, 280);
-            this.tabPage6.TabIndex = 3;
-            this.tabPage6.Text = "View Staff";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.staffIDDataGridViewTextBoxColumn1,
-            this.fNameDataGridViewTextBoxColumn1,
-            this.lNameDataGridViewTextBoxColumn1,
-            this.jobTitleDataGridViewTextBoxColumn,
-            this.jobIDDataGridViewTextBoxColumn,
-            this.hireDateDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn,
-            this.phoneNumberDataGridViewTextBoxColumn1,
-            this.emailDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.staffBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 6);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(523, 161);
-            this.dataGridView2.TabIndex = 0;
-            // 
             // sqlSelectCommand2
             // 
             this.sqlSelectCommand2.CommandText = "SELECT        Staff.*\r\nFROM            Staff";
@@ -978,84 +1091,92 @@
             // 
             this.timeSlotTableAdapter1.ClearBeforeFill = true;
             // 
-            // dataSet31
+            // label23
             // 
-            this.dataSet31.DataSetName = "DataSet3";
-            this.dataSet31.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(29, 28);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(83, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Appointment ID:";
             // 
-            // dataSet31BindingSource
+            // label24
             // 
-            this.dataSet31BindingSource.DataSource = this.dataSet31;
-            this.dataSet31BindingSource.Position = 0;
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(29, 83);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(57, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Patient ID:";
             // 
-            // btnAllStaff
+            // label25
             // 
-            this.btnAllStaff.Location = new System.Drawing.Point(182, 233);
-            this.btnAllStaff.Name = "btnAllStaff";
-            this.btnAllStaff.Size = new System.Drawing.Size(158, 23);
-            this.btnAllStaff.TabIndex = 1;
-            this.btnAllStaff.Text = "View All Staff";
-            this.btnAllStaff.UseVisualStyleBackColor = true;
-            this.btnAllStaff.Click += new System.EventHandler(this.btnAllStaff_Click);
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(29, 138);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Staff ID:";
             // 
-            // staffBindingSource
+            // label26
             // 
-            this.staffBindingSource.DataMember = "Staff";
-            this.staffBindingSource.DataSource = this.dataSet31BindingSource;
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(29, 193);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(61, 13);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Date/Time:";
             // 
-            // staffIDDataGridViewTextBoxColumn1
+            // txtAppointmentID
             // 
-            this.staffIDDataGridViewTextBoxColumn1.DataPropertyName = "StaffID";
-            this.staffIDDataGridViewTextBoxColumn1.HeaderText = "StaffID";
-            this.staffIDDataGridViewTextBoxColumn1.Name = "staffIDDataGridViewTextBoxColumn1";
+            this.txtAppointmentID.Location = new System.Drawing.Point(145, 25);
+            this.txtAppointmentID.Name = "txtAppointmentID";
+            this.txtAppointmentID.Size = new System.Drawing.Size(130, 20);
+            this.txtAppointmentID.TabIndex = 4;
             // 
-            // fNameDataGridViewTextBoxColumn1
+            // txtPatientID
             // 
-            this.fNameDataGridViewTextBoxColumn1.DataPropertyName = "FName";
-            this.fNameDataGridViewTextBoxColumn1.HeaderText = "FName";
-            this.fNameDataGridViewTextBoxColumn1.Name = "fNameDataGridViewTextBoxColumn1";
+            this.txtPatientID.Location = new System.Drawing.Point(145, 76);
+            this.txtPatientID.Name = "txtPatientID";
+            this.txtPatientID.Size = new System.Drawing.Size(130, 20);
+            this.txtPatientID.TabIndex = 5;
             // 
-            // lNameDataGridViewTextBoxColumn1
+            // txtStaffID3
             // 
-            this.lNameDataGridViewTextBoxColumn1.DataPropertyName = "LName";
-            this.lNameDataGridViewTextBoxColumn1.HeaderText = "LName";
-            this.lNameDataGridViewTextBoxColumn1.Name = "lNameDataGridViewTextBoxColumn1";
+            this.txtStaffID3.Location = new System.Drawing.Point(145, 138);
+            this.txtStaffID3.Name = "txtStaffID3";
+            this.txtStaffID3.Size = new System.Drawing.Size(130, 20);
+            this.txtStaffID3.TabIndex = 6;
             // 
-            // jobTitleDataGridViewTextBoxColumn
+            // txtDateTime
             // 
-            this.jobTitleDataGridViewTextBoxColumn.DataPropertyName = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.HeaderText = "JobTitle";
-            this.jobTitleDataGridViewTextBoxColumn.Name = "jobTitleDataGridViewTextBoxColumn";
+            this.txtDateTime.Location = new System.Drawing.Point(145, 193);
+            this.txtDateTime.Name = "txtDateTime";
+            this.txtDateTime.Size = new System.Drawing.Size(130, 20);
+            this.txtDateTime.TabIndex = 7;
             // 
-            // jobIDDataGridViewTextBoxColumn
+            // btnAddAppointment
             // 
-            this.jobIDDataGridViewTextBoxColumn.DataPropertyName = "JobID";
-            this.jobIDDataGridViewTextBoxColumn.HeaderText = "JobID";
-            this.jobIDDataGridViewTextBoxColumn.Name = "jobIDDataGridViewTextBoxColumn";
+            this.btnAddAppointment.Location = new System.Drawing.Point(376, 28);
+            this.btnAddAppointment.Name = "btnAddAppointment";
+            this.btnAddAppointment.Size = new System.Drawing.Size(115, 23);
+            this.btnAddAppointment.TabIndex = 8;
+            this.btnAddAppointment.Text = "Book Appointment";
+            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
             // 
-            // hireDateDataGridViewTextBoxColumn
+            // button2
             // 
-            this.hireDateDataGridViewTextBoxColumn.DataPropertyName = "HireDate";
-            this.hireDateDataGridViewTextBoxColumn.HeaderText = "HireDate";
-            this.hireDateDataGridViewTextBoxColumn.Name = "hireDateDataGridViewTextBoxColumn";
+            this.button2.Location = new System.Drawing.Point(376, 74);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Refresh";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // addressDataGridViewTextBoxColumn
+            // sqlCommand3
             // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            // 
-            // phoneNumberDataGridViewTextBoxColumn1
-            // 
-            this.phoneNumberDataGridViewTextBoxColumn1.DataPropertyName = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.HeaderText = "PhoneNumber";
-            this.phoneNumberDataGridViewTextBoxColumn1.Name = "phoneNumberDataGridViewTextBoxColumn1";
-            // 
-            // emailDataGridViewTextBoxColumn1
-            // 
-            this.emailDataGridViewTextBoxColumn1.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn1.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn1.Name = "emailDataGridViewTextBoxColumn1";
+            this.sqlCommand3.Connection = this.sqlConnection1;
             // 
             // Form1
             // 
@@ -1078,10 +1199,12 @@
             this.tabPage4.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.staffBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1186,6 +1309,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource staffBindingSource;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAddAppointment;
+        private System.Windows.Forms.TextBox txtDateTime;
+        private System.Windows.Forms.TextBox txtStaffID3;
+        private System.Windows.Forms.TextBox txtPatientID;
+        private System.Windows.Forms.TextBox txtAppointmentID;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Data.SqlClient.SqlCommand sqlCommand3;
     }
 }
 

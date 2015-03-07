@@ -73,5 +73,16 @@ namespace AsmaraClinic
         {
             sqlDataAdapter2.Fill(dataSet31);
         }
+
+        private void btnAddAppointment_Click(object sender, EventArgs e)
+        {
+            sqlCommand3.CommandText = @" insert into Appointment(AppointmentID, PatientID, StaffID, DateTime) 
+            values('" + int.Parse(txtAppointmentID.Text.Trim()) + "', '" + int.Parse(txtPatientID.Text.Trim()) + "', '" + int.Parse(txtStaffID3.Text.Trim()) + "', '" + Convert.ToDateTime(txtDateTime.Text.Trim()) + "')";
+
+            sqlConnection1.Open();
+            sqlCommand3.ExecuteNonQuery();
+            sqlConnection1.Close();
+            MessageBox.Show("New Appointment Added Successfully");
+        }
     }
 }
