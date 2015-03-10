@@ -34,6 +34,11 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.cmbPatientID = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnViewPatient = new System.Windows.Forms.Button();
+            this.btnDeletePatient = new System.Windows.Forms.Button();
+            this.btnUpdatePatient = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtStaffID = new System.Windows.Forms.TextBox();
@@ -113,6 +118,27 @@
             this.dataSet31BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet31 = new AsmaraClinic.DataSet3();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAddAppointment = new System.Windows.Forms.Button();
+            this.txtDateTime = new System.Windows.Forms.TextBox();
+            this.txtStaffID3 = new System.Windows.Forms.TextBox();
+            this.txtPatientID = new System.Windows.Forms.TextBox();
+            this.txtAppointmentID = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.btnViewSchedule = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.staffIDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeSlotDetailBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet41BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet41 = new AsmaraClinic.DataSet4();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.sqlConnection1 = new System.Data.SqlClient.SqlConnection();
             this.sqlCommand1 = new System.Data.SqlClient.SqlCommand();
@@ -127,19 +153,18 @@
             this.sqlUpdateCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlDeleteCommand2 = new System.Data.SqlClient.SqlCommand();
             this.sqlDataAdapter2 = new System.Data.SqlClient.SqlDataAdapter();
+            this.sqlCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.sqlSelectCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlInsertCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlUpdateCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDeleteCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.sqlDataAdapter3 = new System.Data.SqlClient.SqlDataAdapter();
             this.asmaraClinicDataSet1 = new AsmaraClinic.AsmaraClinicDataSet();
             this.timeSlotTableAdapter1 = new AsmaraClinic.AsmaraClinicDataSetTableAdapters.TimeSlotTableAdapter();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.txtAppointmentID = new System.Windows.Forms.TextBox();
-            this.txtPatientID = new System.Windows.Forms.TextBox();
-            this.txtStaffID3 = new System.Windows.Forms.TextBox();
-            this.txtDateTime = new System.Windows.Forms.TextBox();
-            this.btnAddAppointment = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.sqlCommand3 = new System.Data.SqlClient.SqlCommand();
+            this.btnViewStaff = new System.Windows.Forms.Button();
+            this.btnUpdateStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -155,6 +180,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet31BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).BeginInit();
             this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            this.tabControl3.SuspendLayout();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSlotDetailBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,7 +197,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(548, 339);
+            this.tabControl1.Size = new System.Drawing.Size(602, 339);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -174,7 +206,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(540, 313);
+            this.tabPage1.Size = new System.Drawing.Size(594, 313);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Patient";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -186,14 +218,21 @@
             this.tabControl2.Controls.Add(this.tabPage4);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Controls.Add(this.tabPage7);
+            this.tabControl2.Controls.Add(this.tabPage8);
             this.tabControl2.Location = new System.Drawing.Point(4, 4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(580, 306);
             this.tabControl2.TabIndex = 0;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.Form1_Load);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.cmbPatientID);
+            this.tabPage3.Controls.Add(this.button3);
+            this.tabPage3.Controls.Add(this.btnViewPatient);
+            this.tabPage3.Controls.Add(this.btnDeletePatient);
+            this.tabPage3.Controls.Add(this.btnUpdatePatient);
             this.tabPage3.Controls.Add(this.btnRefresh);
             this.tabPage3.Controls.Add(this.btnAdd);
             this.tabPage3.Controls.Add(this.txtStaffID);
@@ -224,12 +263,61 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(572, 280);
             this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "New Patient Registration";
+            this.tabPage3.Text = "Patient Registration";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // cmbPatientID
+            // 
+            this.cmbPatientID.FormattingEnabled = true;
+            this.cmbPatientID.Location = new System.Drawing.Point(455, 74);
+            this.cmbPatientID.Name = "cmbPatientID";
+            this.cmbPatientID.Size = new System.Drawing.Size(96, 21);
+            this.cmbPatientID.TabIndex = 29;
+            this.cmbPatientID.SelectedIndexChanged += new System.EventHandler(this.cmbPatientID_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(455, 43);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(96, 23);
+            this.button3.TabIndex = 28;
+            this.button3.Text = "Populate ID";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // btnViewPatient
+            // 
+            this.btnViewPatient.Location = new System.Drawing.Point(106, 233);
+            this.btnViewPatient.Name = "btnViewPatient";
+            this.btnViewPatient.Size = new System.Drawing.Size(75, 23);
+            this.btnViewPatient.TabIndex = 27;
+            this.btnViewPatient.Text = "View Patient";
+            this.btnViewPatient.UseVisualStyleBackColor = true;
+            this.btnViewPatient.Click += new System.EventHandler(this.btnViewPatient_Click);
+            // 
+            // btnDeletePatient
+            // 
+            this.btnDeletePatient.Location = new System.Drawing.Point(320, 235);
+            this.btnDeletePatient.Name = "btnDeletePatient";
+            this.btnDeletePatient.Size = new System.Drawing.Size(87, 23);
+            this.btnDeletePatient.TabIndex = 26;
+            this.btnDeletePatient.Text = "Delete Patient";
+            this.btnDeletePatient.UseVisualStyleBackColor = true;
+            this.btnDeletePatient.Click += new System.EventHandler(this.btnDeletePatient_Click);
+            // 
+            // btnUpdatePatient
+            // 
+            this.btnUpdatePatient.Location = new System.Drawing.Point(202, 235);
+            this.btnUpdatePatient.Name = "btnUpdatePatient";
+            this.btnUpdatePatient.Size = new System.Drawing.Size(94, 23);
+            this.btnUpdatePatient.TabIndex = 25;
+            this.btnUpdatePatient.Text = "Update Patient";
+            this.btnUpdatePatient.UseVisualStyleBackColor = true;
+            this.btnUpdatePatient.Click += new System.EventHandler(this.btnUpdatePatient_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(284, 236);
+            this.btnRefresh.Location = new System.Drawing.Point(422, 235);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefresh.TabIndex = 24;
@@ -239,7 +327,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(109, 236);
+            this.btnAdd.Location = new System.Drawing.Point(15, 234);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 23;
@@ -249,35 +337,35 @@
             // 
             // txtStaffID
             // 
-            this.txtStaffID.Location = new System.Drawing.Point(379, 172);
+            this.txtStaffID.Location = new System.Drawing.Point(295, 172);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.Size = new System.Drawing.Size(100, 20);
             this.txtStaffID.TabIndex = 22;
             // 
             // txtOhip
             // 
-            this.txtOhip.Location = new System.Drawing.Point(379, 137);
+            this.txtOhip.Location = new System.Drawing.Point(295, 137);
             this.txtOhip.Name = "txtOhip";
             this.txtOhip.Size = new System.Drawing.Size(100, 20);
             this.txtOhip.TabIndex = 21;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(379, 102);
+            this.txtEmail.Location = new System.Drawing.Point(295, 102);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(100, 20);
             this.txtEmail.TabIndex = 20;
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(379, 74);
+            this.txtPhone.Location = new System.Drawing.Point(295, 74);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(100, 20);
             this.txtPhone.TabIndex = 19;
             // 
             // txtPostalCode
             // 
-            this.txtPostalCode.Location = new System.Drawing.Point(379, 48);
+            this.txtPostalCode.Location = new System.Drawing.Point(295, 48);
             this.txtPostalCode.Name = "txtPostalCode";
             this.txtPostalCode.Size = new System.Drawing.Size(100, 20);
             this.txtPostalCode.TabIndex = 18;
@@ -327,7 +415,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(295, 174);
+            this.label12.Location = new System.Drawing.Point(211, 174);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 13);
             this.label12.TabIndex = 11;
@@ -336,7 +424,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(295, 139);
+            this.label11.Location = new System.Drawing.Point(211, 139);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(57, 13);
             this.label11.TabIndex = 10;
@@ -345,7 +433,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(295, 105);
+            this.label10.Location = new System.Drawing.Point(211, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(35, 13);
             this.label10.TabIndex = 9;
@@ -354,7 +442,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(295, 76);
+            this.label9.Location = new System.Drawing.Point(211, 76);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(81, 13);
             this.label9.TabIndex = 8;
@@ -363,7 +451,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(295, 48);
+            this.label8.Location = new System.Drawing.Point(211, 48);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 13);
             this.label8.TabIndex = 7;
@@ -427,7 +515,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(164, 15);
+            this.label1.Location = new System.Drawing.Point(120, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(201, 17);
             this.label1.TabIndex = 0;
@@ -447,7 +535,7 @@
             // 
             // btnViewPatients
             // 
-            this.btnViewPatients.Location = new System.Drawing.Point(205, 242);
+            this.btnViewPatients.Location = new System.Drawing.Point(215, 234);
             this.btnViewPatients.Name = "btnViewPatients";
             this.btnViewPatients.Size = new System.Drawing.Size(130, 23);
             this.btnViewPatients.TabIndex = 1;
@@ -474,7 +562,7 @@
             this.dataGridView1.DataSource = this.patientBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(7, 7);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(519, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(559, 221);
             this.dataGridView1.TabIndex = 0;
             // 
             // patientIDDataGridViewTextBoxColumn
@@ -555,6 +643,9 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnDeleteStaff);
+            this.tabPage4.Controls.Add(this.btnUpdateStaff);
+            this.tabPage4.Controls.Add(this.btnViewStaff);
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.btnRefsresh);
             this.tabPage4.Controls.Add(this.btnAddStaff);
@@ -596,7 +687,7 @@
             // 
             // btnRefsresh
             // 
-            this.btnRefsresh.Location = new System.Drawing.Point(260, 251);
+            this.btnRefsresh.Location = new System.Drawing.Point(491, 251);
             this.btnRefsresh.Name = "btnRefsresh";
             this.btnRefsresh.Size = new System.Drawing.Size(75, 23);
             this.btnRefsresh.TabIndex = 19;
@@ -606,7 +697,7 @@
             // 
             // btnAddStaff
             // 
-            this.btnAddStaff.Location = new System.Drawing.Point(118, 251);
+            this.btnAddStaff.Location = new System.Drawing.Point(21, 251);
             this.btnAddStaff.Name = "btnAddStaff";
             this.btnAddStaff.Size = new System.Drawing.Size(75, 23);
             this.btnAddStaff.TabIndex = 18;
@@ -889,12 +980,190 @@
             this.tabPage7.Text = "Appointment";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(376, 74);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Refresh";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnAddAppointment
+            // 
+            this.btnAddAppointment.Location = new System.Drawing.Point(376, 28);
+            this.btnAddAppointment.Name = "btnAddAppointment";
+            this.btnAddAppointment.Size = new System.Drawing.Size(115, 23);
+            this.btnAddAppointment.TabIndex = 8;
+            this.btnAddAppointment.Text = "Book Appointment";
+            this.btnAddAppointment.UseVisualStyleBackColor = true;
+            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
+            // 
+            // txtDateTime
+            // 
+            this.txtDateTime.Location = new System.Drawing.Point(145, 193);
+            this.txtDateTime.Name = "txtDateTime";
+            this.txtDateTime.Size = new System.Drawing.Size(130, 20);
+            this.txtDateTime.TabIndex = 7;
+            // 
+            // txtStaffID3
+            // 
+            this.txtStaffID3.Location = new System.Drawing.Point(145, 138);
+            this.txtStaffID3.Name = "txtStaffID3";
+            this.txtStaffID3.Size = new System.Drawing.Size(130, 20);
+            this.txtStaffID3.TabIndex = 6;
+            // 
+            // txtPatientID
+            // 
+            this.txtPatientID.Location = new System.Drawing.Point(145, 76);
+            this.txtPatientID.Name = "txtPatientID";
+            this.txtPatientID.Size = new System.Drawing.Size(130, 20);
+            this.txtPatientID.TabIndex = 5;
+            // 
+            // txtAppointmentID
+            // 
+            this.txtAppointmentID.Location = new System.Drawing.Point(145, 25);
+            this.txtAppointmentID.Name = "txtAppointmentID";
+            this.txtAppointmentID.Size = new System.Drawing.Size(130, 20);
+            this.txtAppointmentID.TabIndex = 4;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(29, 193);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(61, 13);
+            this.label26.TabIndex = 3;
+            this.label26.Text = "Date/Time:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(29, 138);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(46, 13);
+            this.label25.TabIndex = 2;
+            this.label25.Text = "Staff ID:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(29, 83);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(57, 13);
+            this.label24.TabIndex = 1;
+            this.label24.Text = "Patient ID:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(29, 28);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(83, 13);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Appointment ID:";
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Controls.Add(this.tabControl3);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(572, 280);
+            this.tabPage8.TabIndex = 5;
+            this.tabPage8.Text = "Schedule";
+            this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // tabControl3
+            // 
+            this.tabControl3.Controls.Add(this.tabPage9);
+            this.tabControl3.Controls.Add(this.tabPage10);
+            this.tabControl3.Location = new System.Drawing.Point(3, 3);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(529, 274);
+            this.tabControl3.TabIndex = 0;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Controls.Add(this.btnViewSchedule);
+            this.tabPage9.Controls.Add(this.dataGridView3);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(521, 248);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "View Schedule";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // btnViewSchedule
+            // 
+            this.btnViewSchedule.Location = new System.Drawing.Point(162, 173);
+            this.btnViewSchedule.Name = "btnViewSchedule";
+            this.btnViewSchedule.Size = new System.Drawing.Size(116, 23);
+            this.btnViewSchedule.TabIndex = 1;
+            this.btnViewSchedule.Text = "View Schedule";
+            this.btnViewSchedule.UseVisualStyleBackColor = true;
+            this.btnViewSchedule.Click += new System.EventHandler(this.btnViewSchedule_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.staffIDDataGridViewTextBoxColumn2,
+            this.dateTimeDataGridViewTextBoxColumn});
+            this.dataGridView3.DataSource = this.timeSlotDetailBindingSource;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 7);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(512, 150);
+            this.dataGridView3.TabIndex = 0;
+            // 
+            // staffIDDataGridViewTextBoxColumn2
+            // 
+            this.staffIDDataGridViewTextBoxColumn2.DataPropertyName = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn2.HeaderText = "StaffID";
+            this.staffIDDataGridViewTextBoxColumn2.Name = "staffIDDataGridViewTextBoxColumn2";
+            this.staffIDDataGridViewTextBoxColumn2.Width = 250;
+            // 
+            // dateTimeDataGridViewTextBoxColumn
+            // 
+            this.dateTimeDataGridViewTextBoxColumn.DataPropertyName = "DateTime";
+            this.dateTimeDataGridViewTextBoxColumn.HeaderText = "DateTime";
+            this.dateTimeDataGridViewTextBoxColumn.Name = "dateTimeDataGridViewTextBoxColumn";
+            this.dateTimeDataGridViewTextBoxColumn.Width = 250;
+            // 
+            // timeSlotDetailBindingSource
+            // 
+            this.timeSlotDetailBindingSource.DataMember = "TimeSlotDetail";
+            this.timeSlotDetailBindingSource.DataSource = this.dataSet41BindingSource;
+            // 
+            // dataSet41BindingSource
+            // 
+            this.dataSet41BindingSource.DataSource = this.dataSet41;
+            this.dataSet41BindingSource.Position = 0;
+            // 
+            // dataSet41
+            // 
+            this.dataSet41.DataSetName = "DataSet4";
+            this.dataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(521, 248);
+            this.tabPage10.TabIndex = 1;
+            this.tabPage10.Text = "tabPage10";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(540, 313);
+            this.tabPage2.Size = new System.Drawing.Size(594, 313);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Staff";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1082,6 +1351,55 @@
                         new System.Data.Common.DataColumnMapping("Email", "Email")})});
             this.sqlDataAdapter2.UpdateCommand = this.sqlUpdateCommand2;
             // 
+            // sqlCommand3
+            // 
+            this.sqlCommand3.Connection = this.sqlConnection1;
+            // 
+            // sqlSelectCommand3
+            // 
+            this.sqlSelectCommand3.CommandText = "SELECT        TimeSlotDetail.*\r\nFROM            TimeSlotDetail";
+            this.sqlSelectCommand3.Connection = this.sqlConnection1;
+            // 
+            // sqlInsertCommand3
+            // 
+            this.sqlInsertCommand3.CommandText = "INSERT INTO [TimeSlotDetail] ([StaffID], [DateTime]) VALUES (@StaffID, @DateTime)" +
+    ";\r\nSELECT StaffID, DateTime FROM TimeSlotDetail WHERE (DateTime = @DateTime) AND" +
+    " (StaffID = @StaffID)";
+            this.sqlInsertCommand3.Connection = this.sqlConnection1;
+            this.sqlInsertCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@StaffID", System.Data.SqlDbType.Int, 0, "StaffID"),
+            new System.Data.SqlClient.SqlParameter("@DateTime", System.Data.SqlDbType.DateTime, 0, "DateTime")});
+            // 
+            // sqlUpdateCommand3
+            // 
+            this.sqlUpdateCommand3.CommandText = resources.GetString("sqlUpdateCommand3.CommandText");
+            this.sqlUpdateCommand3.Connection = this.sqlConnection1;
+            this.sqlUpdateCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@StaffID", System.Data.SqlDbType.Int, 0, "StaffID"),
+            new System.Data.SqlClient.SqlParameter("@DateTime", System.Data.SqlDbType.DateTime, 0, "DateTime"),
+            new System.Data.SqlClient.SqlParameter("@Original_StaffID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StaffID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_DateTime", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "DateTime", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlDeleteCommand3
+            // 
+            this.sqlDeleteCommand3.CommandText = "DELETE FROM [TimeSlotDetail] WHERE (([StaffID] = @Original_StaffID) AND ([DateTim" +
+    "e] = @Original_DateTime))";
+            this.sqlDeleteCommand3.Connection = this.sqlConnection1;
+            this.sqlDeleteCommand3.Parameters.AddRange(new System.Data.SqlClient.SqlParameter[] {
+            new System.Data.SqlClient.SqlParameter("@Original_StaffID", System.Data.SqlDbType.Int, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "StaffID", System.Data.DataRowVersion.Original, null),
+            new System.Data.SqlClient.SqlParameter("@Original_DateTime", System.Data.SqlDbType.DateTime, 0, System.Data.ParameterDirection.Input, false, ((byte)(0)), ((byte)(0)), "DateTime", System.Data.DataRowVersion.Original, null)});
+            // 
+            // sqlDataAdapter3
+            // 
+            this.sqlDataAdapter3.DeleteCommand = this.sqlDeleteCommand3;
+            this.sqlDataAdapter3.InsertCommand = this.sqlInsertCommand3;
+            this.sqlDataAdapter3.SelectCommand = this.sqlSelectCommand3;
+            this.sqlDataAdapter3.TableMappings.AddRange(new System.Data.Common.DataTableMapping[] {
+            new System.Data.Common.DataTableMapping("Table", "TimeSlotDetail", new System.Data.Common.DataColumnMapping[] {
+                        new System.Data.Common.DataColumnMapping("StaffID", "StaffID"),
+                        new System.Data.Common.DataColumnMapping("DateTime", "DateTime")})});
+            this.sqlDataAdapter3.UpdateCommand = this.sqlUpdateCommand3;
+            // 
             // asmaraClinicDataSet1
             // 
             this.asmaraClinicDataSet1.DataSetName = "AsmaraClinicDataSet";
@@ -1091,92 +1409,35 @@
             // 
             this.timeSlotTableAdapter1.ClearBeforeFill = true;
             // 
-            // label23
+            // btnViewStaff
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(29, 28);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 13);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Appointment ID:";
+            this.btnViewStaff.Location = new System.Drawing.Point(128, 250);
+            this.btnViewStaff.Name = "btnViewStaff";
+            this.btnViewStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnViewStaff.TabIndex = 21;
+            this.btnViewStaff.Text = "View Staff";
+            this.btnViewStaff.UseVisualStyleBackColor = true;
+            this.btnViewStaff.Click += new System.EventHandler(this.btnViewStaff_Click);
             // 
-            // label24
+            // btnUpdateStaff
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(29, 83);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(57, 13);
-            this.label24.TabIndex = 1;
-            this.label24.Text = "Patient ID:";
+            this.btnUpdateStaff.Location = new System.Drawing.Point(248, 249);
+            this.btnUpdateStaff.Name = "btnUpdateStaff";
+            this.btnUpdateStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdateStaff.TabIndex = 22;
+            this.btnUpdateStaff.Text = "Update Staff";
+            this.btnUpdateStaff.UseVisualStyleBackColor = true;
+            this.btnUpdateStaff.Click += new System.EventHandler(this.btnUpdateStaff_Click);
             // 
-            // label25
+            // btnDeleteStaff
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(29, 138);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(46, 13);
-            this.label25.TabIndex = 2;
-            this.label25.Text = "Staff ID:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(29, 193);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(61, 13);
-            this.label26.TabIndex = 3;
-            this.label26.Text = "Date/Time:";
-            // 
-            // txtAppointmentID
-            // 
-            this.txtAppointmentID.Location = new System.Drawing.Point(145, 25);
-            this.txtAppointmentID.Name = "txtAppointmentID";
-            this.txtAppointmentID.Size = new System.Drawing.Size(130, 20);
-            this.txtAppointmentID.TabIndex = 4;
-            // 
-            // txtPatientID
-            // 
-            this.txtPatientID.Location = new System.Drawing.Point(145, 76);
-            this.txtPatientID.Name = "txtPatientID";
-            this.txtPatientID.Size = new System.Drawing.Size(130, 20);
-            this.txtPatientID.TabIndex = 5;
-            // 
-            // txtStaffID3
-            // 
-            this.txtStaffID3.Location = new System.Drawing.Point(145, 138);
-            this.txtStaffID3.Name = "txtStaffID3";
-            this.txtStaffID3.Size = new System.Drawing.Size(130, 20);
-            this.txtStaffID3.TabIndex = 6;
-            // 
-            // txtDateTime
-            // 
-            this.txtDateTime.Location = new System.Drawing.Point(145, 193);
-            this.txtDateTime.Name = "txtDateTime";
-            this.txtDateTime.Size = new System.Drawing.Size(130, 20);
-            this.txtDateTime.TabIndex = 7;
-            // 
-            // btnAddAppointment
-            // 
-            this.btnAddAppointment.Location = new System.Drawing.Point(376, 28);
-            this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(115, 23);
-            this.btnAddAppointment.TabIndex = 8;
-            this.btnAddAppointment.Text = "Book Appointment";
-            this.btnAddAppointment.UseVisualStyleBackColor = true;
-            this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(376, 74);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(115, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Refresh";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // sqlCommand3
-            // 
-            this.sqlCommand3.Connection = this.sqlConnection1;
+            this.btnDeleteStaff.Location = new System.Drawing.Point(355, 248);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(75, 23);
+            this.btnDeleteStaff.TabIndex = 23;
+            this.btnDeleteStaff.Text = "Delete Staff";
+            this.btnDeleteStaff.UseVisualStyleBackColor = true;
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
             // 
             // Form1
             // 
@@ -1186,6 +1447,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Receptionist";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
@@ -1204,6 +1466,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSet31)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.timeSlotDetailBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet41)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.asmaraClinicDataSet1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1321,6 +1590,31 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Data.SqlClient.SqlCommand sqlCommand3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Data.SqlClient.SqlCommand sqlSelectCommand3;
+        private System.Data.SqlClient.SqlCommand sqlInsertCommand3;
+        private System.Data.SqlClient.SqlCommand sqlUpdateCommand3;
+        private System.Data.SqlClient.SqlCommand sqlDeleteCommand3;
+        private System.Data.SqlClient.SqlDataAdapter sqlDataAdapter3;
+        private System.Windows.Forms.Button btnViewSchedule;
+        private System.Windows.Forms.BindingSource dataSet41BindingSource;
+        private DataSet4 dataSet41;
+        private System.Windows.Forms.BindingSource timeSlotDetailBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnUpdatePatient;
+        private System.Windows.Forms.Button btnDeletePatient;
+        private System.Windows.Forms.Button btnViewPatient;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cmbPatientID;
+        private System.Windows.Forms.Button btnDeleteStaff;
+        private System.Windows.Forms.Button btnUpdateStaff;
+        private System.Windows.Forms.Button btnViewStaff;
     }
 }
 
