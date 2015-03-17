@@ -123,8 +123,8 @@ namespace AsmaraClinic
 
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
-            sqlCommand2.CommandText = @" insert into Staff(StaffID, FName, LName, JobTitle, JobID, HireDate, Address, PhoneNumber, Email) 
-            values('" + int.Parse(txtStaffID1.Text.Trim()) + "', '" + txtSFName.Text.Trim() + "', '" + txtSLName.Text.Trim() + "', '" + txtJobTitle.Text.Trim() + "', '" + txtJobId.Text.Trim() + "', '" + txtHireDate.Text.Trim() + "', '" + txtAddress.Text.Trim() + "', '" + txtSPhone.Text.Trim() + "', '" + txtSEmail.Text.Trim() +  "')";
+            sqlCommand2.CommandText = @" insert into Staff(StaffID, FName, LName, JobTitle, HireDate, Address, PhoneNumber, Email) 
+            values('" + int.Parse(txtStaffID1.Text.Trim()) + "', '" + txtSFName.Text.Trim() + "', '" + txtSLName.Text.Trim() + "', '" + txtJobTitle.Text.Trim() + "', '" + txtHireDate.Text.Trim() + "', '" + txtAddress.Text.Trim() + "', '" + txtSPhone.Text.Trim() + "', '" + txtSEmail.Text.Trim() +  "')";
 
             sqlConnection1.Open();
             sqlCommand2.ExecuteNonQuery();
@@ -135,7 +135,7 @@ namespace AsmaraClinic
         private void btnRefsresh_Click(object sender, EventArgs e)
         {
             txtStaffID1.Clear(); txtSFName.Clear(); txtSLName.Clear(); txtJobTitle.Clear();
-            txtJobId.Clear(); txtHireDate.Clear(); txtAddress.Clear();
+            txtHireDate.Clear(); txtAddress.Clear();
             txtSEmail.Clear(); txtSPhone.Clear();
         }
 
@@ -146,7 +146,7 @@ namespace AsmaraClinic
 
         private void btnAllStaff_Click(object sender, EventArgs e)
         {
-            sqlDataAdapter2.Fill(dataSet31);
+            sqlDataAdapter2.Fill(dataSet61);
         }
 
         private void btnViewStaff_Click(object sender, EventArgs e)
@@ -163,15 +163,14 @@ namespace AsmaraClinic
                 String fname = rd.GetString(1);
                 String lname = rd.GetString(2);
                 String jobTitle = rd.GetString(3);
-                String jobID = rd.GetString(4);
-                String hireDate = rd.GetDateTime(5).ToString();
-                String address = rd.GetString(6);
-                String phone = rd.GetString(7);
-                String email = rd.GetString(8);
+                String hireDate = rd.GetDateTime(4).ToString();
+                String address = rd.GetString(5);
+                String phone = rd.GetString(6);
+                String email = rd.GetString(7);
 
 
                 txtStaffID1.Text = id; txtSFName.Text = fname; txtSLName.Text = lname; txtJobTitle.Text = jobTitle;
-                txtJobId.Text = jobID; txtHireDate.Text = hireDate; txtAddress.Text = address;
+                txtHireDate.Text = hireDate; txtAddress.Text = address;
                 txtSPhone.Text = phone; txtSEmail.Text = email; 
             }
             con.Close();
@@ -180,7 +179,7 @@ namespace AsmaraClinic
         private void btnUpdateStaff_Click(object sender, EventArgs e)
         {
             con.Open();
-            String st = "update Staff set StaffID='" + int.Parse(txtStaffID1.Text.Trim()) + "', FName= '" + txtSFName.Text.Trim() + "', LName= '" + txtSLName.Text.Trim() + "', JobTitle= '" + txtJobTitle.Text.Trim() + "', JobID= '" + txtJobId.Text.Trim() + "', HireDate= '" + txtHireDate.Text.Trim() + "', Address= '" + txtAddress.Text.Trim() + "', PhoneNumber= '" + txtSPhone.Text.Trim() + "', Email= '" + txtSEmail.Text.Trim() + "' Where StaffID= '" + int.Parse(txtStaffID1.Text.Trim()) + "' ";
+            String st = "update Staff set StaffID='" + int.Parse(txtStaffID1.Text.Trim()) + "', FName= '" + txtSFName.Text.Trim() + "', LName= '" + txtSLName.Text.Trim() + "', JobTitle= '" + txtJobTitle.Text.Trim() + "', HireDate= '" + txtHireDate.Text.Trim() + "', Address= '" + txtAddress.Text.Trim() + "', PhoneNumber= '" + txtSPhone.Text.Trim() + "', Email= '" + txtSEmail.Text.Trim() + "' Where StaffID= '" + int.Parse(txtStaffID1.Text.Trim()) + "' ";
             SqlCommand com = new SqlCommand(st, con);
 
             com.ExecuteNonQuery();
@@ -200,8 +199,8 @@ namespace AsmaraClinic
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            sqlCommand3.CommandText = @" insert into Appointment(AppointmentID, PatientID, StaffID, DateTime) 
-            values('" + int.Parse(txtAppointmentID.Text.Trim()) + "', '" + int.Parse(txtPatientID.Text.Trim()) + "', '" + int.Parse(txtStaffID3.Text.Trim()) + "', '" + Convert.ToDateTime(txtDateTime.Text.Trim()) + "')";
+            sqlCommand3.CommandText = @" insert into Appointment(AppointmentID, PatientID, StaffID, TimeSlotID, Status) 
+            values('" + int.Parse(txtAppointmentID.Text.Trim()) + "', '" + int.Parse(txtPatientID.Text.Trim()) + "', '" + int.Parse(txtStaffID3.Text.Trim()) + "', '" + int.Parse(txtTimeSlotID.Text.Trim()) + "', 'Active')";
 
             sqlConnection1.Open();
             sqlCommand3.ExecuteNonQuery();
@@ -209,6 +208,44 @@ namespace AsmaraClinic
             MessageBox.Show("New Appointment Added Successfully");
         }
 
+        private void btnViewAppointment_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String st = "Select * from Appointment where AppointmentID='" + int.Parse(txtAppointmentID.Text.Trim()) + "' ";
+            SqlCommand com = new SqlCommand(st, con);
+
+            SqlDataReader rd = com.ExecuteReader();
+
+            while (rd.Read())
+            {
+                String appoId = rd.GetInt32(0).ToString();
+                String paId = rd.GetInt32(1).ToString();
+                String staId = rd.GetInt32(2).ToString();
+                String tiId = rd.GetInt32(3).ToString();
+                String stat = rd.GetString(4);
+
+
+                txtAppointmentID.Text = appoId; txtPatientID.Text = paId; txtStaffID3.Text = staId; txtTimeSlotID.Text = tiId; txtStatus.Text = stat;
+             
+            }
+            con.Close();
+        }
+
+        private void btnUpdateAppointment_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            String st = "update Appointment set AppointmentID='" + int.Parse(txtAppointmentID.Text.Trim()) + "', PatientID= '" + int.Parse(txtPatientID.Text.Trim()) + "', StaffID= '" + int.Parse(txtStaffID3.Text.Trim()) + "',  TimeSlotID= '" + int.Parse(txtTimeSlotID.Text.Trim()) + "', Status='" + txtStatus.Text.Trim() + "' Where AppointmentID= '" + int.Parse(txtAppointmentID.Text.Trim()) + "' ";
+            SqlCommand com = new SqlCommand(st, con);
+
+            com.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Appointment Info Updated Successfully");
+        }
+
+        private void btnAppointmentRefersh_Click(object sender, EventArgs e)
+        {
+            txtAppointmentID.Clear(); txtPatientID.Clear(); txtStaffID3.Clear(); txtTimeSlotID.Clear(); txtStatus.Clear();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             //// TODO: This line of code loads data into the 'asmaraClinicDataSet1.TimeSlotDetail' table. You can move, or remove it, as needed.
@@ -218,7 +255,7 @@ namespace AsmaraClinic
 
         private void btnViewSchedule_Click(object sender, EventArgs e)
         {
-            sqlDataAdapter3.Fill(dataSet41);
+            sqlDataAdapter5.Fill(dataSet51);
         }
 
    
@@ -234,6 +271,19 @@ namespace AsmaraClinic
             }
             con.Close();
         }
+
+       private void btnViewAppointments_Click(object sender, EventArgs e)
+       {
+           sqlDataAdapter6.Fill(dataSet71);
+       }
+
+      
+
+      
+
+       
+
+       
 
       
 
