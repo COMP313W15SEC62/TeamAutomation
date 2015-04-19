@@ -1,0 +1,20 @@
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\bin\Debug\AsmaraClinic.exe.config
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.exe
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.AsmaraClinic.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.LogIn.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.Properties.Resources.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\bin\Debug\AsmaraClinic.exe
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\bin\Debug\AsmaraClinic.pdb
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic\AsmaraClinic\obj\Debug\AsmaraClinic.pdb
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\bin\Debug\AsmaraClinic.exe.config
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.exe
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.pdb
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\bin\Debug\AsmaraClinic.exe
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\bin\Debug\AsmaraClinic.pdb
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.AsmaraClinic.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.LogIn.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.Properties.Resources.resources
+C:\Users\User\Desktop\TeamAutomation\AsmaraClinic -2\AsmaraClinic\obj\Debug\AsmaraClinic.csproj.GenerateResource.Cache

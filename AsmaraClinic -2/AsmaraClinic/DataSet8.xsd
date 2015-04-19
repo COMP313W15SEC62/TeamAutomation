@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet8" targetNamespace="http://tempuri.org/DataSet8.xsd" xmlns:mstns="http://tempuri.org/DataSet8.xsd" xmlns="http://tempuri.org/DataSet8.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet8" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet8" msprop:Generator_DataSetName="DataSet8">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TimeSlot" msprop:Generator_TableClassName="TimeSlotDataTable" msprop:Generator_TableVarName="tableTimeSlot" msprop:Generator_TablePropName="TimeSlot" msprop:Generator_RowDeletingName="TimeSlotRowDeleting" msprop:Generator_RowChangingName="TimeSlotRowChanging" msprop:Generator_RowEvHandlerName="TimeSlotRowChangeEventHandler" msprop:Generator_RowDeletedName="TimeSlotRowDeleted" msprop:Generator_UserTableName="TimeSlot" msprop:Generator_RowChangedName="TimeSlotRowChanged" msprop:Generator_RowEvArgName="TimeSlotRowChangeEvent" msprop:Generator_RowClassName="TimeSlotRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TimeSlotID" msprop:Generator_ColumnVarNameInTable="columnTimeSlotID" msprop:Generator_ColumnPropNameInRow="TimeSlotID" msprop:Generator_ColumnPropNameInTable="TimeSlotIDColumn" msprop:Generator_UserColumnName="TimeSlotID" type="xs:int" />
+              <xs:element name="DateTime" msprop:Generator_ColumnVarNameInTable="columnDateTime" msprop:Generator_ColumnPropNameInRow="DateTime" msprop:Generator_ColumnPropNameInTable="DateTimeColumn" msprop:Generator_UserColumnName="DateTime" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TimeSlot" />
+      <xs:field xpath="mstns:TimeSlotID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
